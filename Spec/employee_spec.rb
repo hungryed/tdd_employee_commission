@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../employee'
+require_relative '../lib/employee'
 
 describe Employee do
   describe "Full Employee info" do
@@ -26,7 +26,7 @@ describe Employee do
     end
   end
 
-  describe "Allow nil values"
+  describe "Allow nil values" do
     new_employee = Employee.new(nil, nil, nil, nil, nil)
 
     it "should allow nil value for first_name" do
@@ -48,5 +48,5 @@ describe Employee do
     it "should allow nil value for tax_rate" do
       expect(new_employee.tax_rate).to eql(0)
     end
-
+  end
 end

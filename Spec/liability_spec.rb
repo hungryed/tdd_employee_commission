@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../liability'
+require_relative '../lib/liability'
 
 describe Liability do
 

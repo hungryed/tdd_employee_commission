@@ -1,12 +1,11 @@
 class TaxCalculator
-
   class << self
     def get_amount_owed
       (get_amount_due - @tax_paid).to_i
     end
 
     def liability(employee)
-      raise "#{employee} is not an employee" if !employee.is_a?(Employee)
+      fail "#{employee} is not an employee" if !employee.is_a?(Employee)
       @annual_income = employee.annual_income
       @tax_paid = employee.tax_paid
       @tax_rate = employee.tax_rate

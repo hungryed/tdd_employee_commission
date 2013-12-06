@@ -12,7 +12,7 @@ describe TaxCalculator do
     expect{ TaxCalculator.liability(1) }.to raise_error('1 is not an employee')
   end
 
-  it "should return an instance of the Liability class" do
+  it 'should return an instance of the Liability class' do
     expect(TaxCalculator.liability(employee)).to be_an_instance_of Liability
   end
 end

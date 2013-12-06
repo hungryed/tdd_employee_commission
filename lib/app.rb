@@ -1,4 +1,3 @@
-require 'pry'
 require 'csv'
 require_relative 'employee'
 require_relative 'employee_reader'
@@ -12,8 +11,7 @@ testing.read_file
 employees = testing.employees
 
 employees.each do |employee|
-  employee.assign_liability
-  employee.liability.display
+  employee_liability = TaxCalculator.liability(employee)
+  employee_liability.display
 end
 
-binding.pry

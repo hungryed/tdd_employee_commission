@@ -1,6 +1,5 @@
 class Employee
   attr_reader :first_name, :last_name, :annual_income, :tax_paid, :tax_rate
-  attr_accessor :liability
 
   def initialize(first_name, last_name, annual_income, tax_paid, tax_rate)
     @first_name = first_name ||= "[first_name]"
@@ -10,7 +9,4 @@ class Employee
     @tax_rate = tax_rate ||= 0
   end
 
-  def assign_liability
-    @liability = TaxCalculator.liability(self)
-  end
 end

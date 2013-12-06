@@ -1,4 +1,5 @@
 class Liability
+  attr_reader :employee, :amount_due, :amount_owed
 
   def initialize(employee, amount_paid, amount_owed)
     @employee = employee

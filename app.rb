@@ -11,4 +11,9 @@ testing = EmployeeReader.new(filename)
 testing.read_file
 employees = testing.employees
 
+employees.each do |employee|
+  employee.assign_liability
+  employee.liability.display
+end
+
 binding.pry

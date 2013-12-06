@@ -1,15 +1,9 @@
 require 'rspec'
-require_relative 'employee'
+require_relative '../employee'
 
 describe Employee do
   describe "Full Employee info" do
-    first_name = 'Joe'
-    last_name = 'Schmo'
-    annual_income = 80000
-    tax_paid = 10000
-    tax_rate = 38
-
-    new_employee = Employee.new(first_name, last_name, annual_income, tax_paid, tax_rate)
+    new_employee = Employee.new('Joe', 'Schmo', 80000, 10000, 38)
 
     it "should allow first name to be accessed" do
       expect(new_employee.first_name).to eql('Joe')
@@ -33,13 +27,7 @@ describe Employee do
   end
 
   describe "Allow nil values"
-    first_name = nil
-    last_name = nil
-    annual_income = nil
-    tax_paid = nil
-    tax_rate = nil
-
-    new_employee = Employee.new(first_name, last_name, annual_income, tax_paid, tax_rate)
+    new_employee = Employee.new(nil, nil, nil, nil, nil)
 
     it "should allow nil value for first_name" do
       expect(new_employee.first_name).to eql('[first_name]')
